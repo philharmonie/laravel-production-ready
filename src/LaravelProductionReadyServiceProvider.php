@@ -21,6 +21,9 @@ class LaravelProductionReadyServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/docker-compose.prod.yml' => base_path('docker-compose.prod.yml'),
         ]);
+        $this->publishes([
+            __DIR__ . '/.env.prod' => base_path('.env.prod'),
+        ]);
     }
 
     /**
