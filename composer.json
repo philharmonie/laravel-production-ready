@@ -1,0 +1,31 @@
+{
+  "name": "philharmonie/laravel-production-ready",
+  "description": "Laravel 9 production ready with docker using php8.1 and nginx",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Phil Harmonie",
+      "email": "phil@harmonie.media",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Philharmonie\\LaravelProductionReady\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Philharmonie\\LaravelProductionReady\\LaravelProductionReadyServiceProvider"
+      ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+cd /var/www
+
+# php artisan migrate:fresh --seed
+php artisan cache:clear
+php artisan route:cache
+
+chown -R app:www-data /var/www
+chmod -R ug+rwx storage bootstrap/cache
+
+npm install
+npm run production
+
+/usr/bin/supervisord -c /etc/supervisord.conf
